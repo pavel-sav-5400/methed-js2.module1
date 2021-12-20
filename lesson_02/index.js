@@ -10,5 +10,10 @@
    console.log('Общая сумма товара:' , quantity * cost);
 }
 
-
+{
+   const product = 'Микроволновка';
+   const quantity = 50;
+   const category = 'Бытовая техника';
+   const cost = 6000;
+}
 
