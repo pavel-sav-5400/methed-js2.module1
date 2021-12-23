@@ -23,6 +23,14 @@
    const category = prompt('Категория товара');
    const cost = +prompt('Цена товара');
 
+   console.log('product: ',typeof product);
+   console.log('count: ',typeof count);
+   console.log('category: ',typeof category);
+   console.log('cost: ',typeof cost);
+   
+   
+   
+
    console.log(`На складе ${count} шт. товара: ${product} на сумму ${count * cost} руб.`);
    
 }
