@@ -23,7 +23,7 @@
                     //задача 4
 
         const money = +prompt('Сколько денег вы хотите снять?'); 
-        console.log('money: ',typeof money);
+        
         
         if (money % 100 === 0)  {
             console.log('Возьмите деньги');
