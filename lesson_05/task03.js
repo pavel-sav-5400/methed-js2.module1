@@ -5,4 +5,4 @@
         return inpstr.split('').reverse().join('')
     };
 
-    console.log(reverseString());
+   reverseString();
