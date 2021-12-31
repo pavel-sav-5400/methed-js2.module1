@@ -11,12 +11,12 @@
                   
            }; 
            const doll1 = eurToDol();
-           console.log(eurToDol());
+           //console.log(eurToDol());
 
                 const dolToRub = () => {
                  return doll1 * rub    
                 };
-                console.log(dolToRub());
+                //console.log(dolToRub());
 
 
            return dolToRub();
@@ -25,7 +25,7 @@
         
         
         
-        console.log(`Сумма покупки ${convert()} руб.`);
+        console.log(`Сумма покупки ${convert().toFixed(2)} руб.`);
         
         
         
