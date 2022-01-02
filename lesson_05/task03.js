@@ -1,8 +1,8 @@
     'use strict'
 
     const reverseString = () => {
-        let inpstr = prompt('');
+        let inpstr = prompt('Введите текст');
         return inpstr.split('').reverse().join('')
     };
 
-   reverseString();
+   console.log(reverseString());
