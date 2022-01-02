@@ -29,10 +29,5 @@
         
         
         
-        /*let a = +prompt(''),
-            b = 1.2,
-            с = 0,
-            res = a * b;
-            console.log('res: ', res);*/
-            
+        
 
