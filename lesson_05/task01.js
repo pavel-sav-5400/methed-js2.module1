@@ -8,8 +8,6 @@
                 return money * doll * rub;
                };
         
-        
-        
         console.log(`Сумма покупки ${convert().toFixed(2)} руб.`);
         
         

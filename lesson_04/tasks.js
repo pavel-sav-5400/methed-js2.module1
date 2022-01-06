@@ -1,6 +1,6 @@
         'use strict'
                     //задача 2
-        const rain = Math.random() * 1;
+        /*const rain = Math.random() * 1;
         
         if (Math.round(rain) == 1) {
             console.log('Пошёл дождь. Возьмите зонт!');
@@ -18,7 +18,7 @@
             console.log('Поздравляю, вы поступили на бюджет!');
         } else {
             console.log('К сожалению вы не поступили:(');
-        };
+        };*/
 
                     //задача 4
 
