@@ -1,56 +1,57 @@
         'use strict'
 
         const calculate = (basketAmount = +prompt('сумма'), basketProd = +prompt('колво'), promo = prompt('промо')) => {
-                
+                let disc3,
+                    disc15,
+                    discMethed,
+                    discG3H2Z1;
                
-                const totalAmount3 = () => {
+               
                   if (basketProd > 10) {
-                       return basketAmount * 0.03
-                       
-                        
-                } else {
-                  return 0
+                       disc3 = basketAmount * 0.03
+                  } else {
+                       disc3 = 0
                 }
-              };
-                //console.log('3 % колво > 10 ' + totalAmount3());
+            
+                //console.log('3 % колво > 10 ' + disc3);
                 
-                const totalAmount15 = () => {
+                
                 if (basketAmount > 30000) {
-                         return (basketAmount - 30000) * 0.15
+                        disc15 = (basketAmount - 30000) * 0.15
                          
                 } else {
-                  return 0
+                        disc15 = 0
                 }
-              };
-                //console.log('15 % > 30000 ' + totalAmount15());
+             
+                //console.log('15 % > 30000 ' + disc15);
 
-                const totalAmount10 = () => {
+                
                   if (promo === 'METHED') {
-                        return basketAmount * 0.10
+                        discMethed = basketAmount * 0.10
                         
                 } else {
-                  return 0
+                        discMethed = 0
                 }
-              };
-                //console.log('10 % methed ' + totalAmount10());
+              
+                //onsole.log('10 % methed ' + discMethed);
 
-                let discount = totalAmount3() + totalAmount15() + totalAmount10();
-                //console.log('скидка' +  discount);
+                
+                
                 
 
-                const totalAmount500 = () => {
-                  if (promo === 'G3H2Z1' && (basketAmount - discount) > 2000)
+                
+                  if (promo === 'G3H2Z1' && (basketAmount - (disc3 + disc15 + discMethed)) > 2000)
                          {
-                              return  500
+                              discG3H2Z1 = 500
                         } else {
-                          return 0
+                          discG3H2Z1 = 0
                         }
                         
-                };
-                //console.log('500 руб G3H2Z1 ' + totalAmount500());
-                let totalAmount = basketAmount - discount - totalAmount500();
-                console.log('Итоговая стоимость корзины - ' + totalAmount);
+                
+                //console.log('500 руб G3H2Z1 ' + discG3H2Z1);
+                return basketAmount - (disc3 + disc15 + discMethed + discG3H2Z1);
                 
                 
         };
-        calculate();
+        console.log('Итоговая стоимость корзины ' + calculate());
+        
