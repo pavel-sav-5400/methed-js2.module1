@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use strict'
 
 const nums = [
@@ -12,3 +13,19 @@ const numbers = nums.map((item, n, m) =>  {
     })
 
 console.log(numbers);
+=======
+'use strict'
+
+const nums = [
+   1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+];
+
+const numbers = nums.map((item, n, m) =>  {
+    const getRundomNum = (n, m) => {
+    return Math.round(Math.random() * (m - n) + n);
+    };
+    return getRundomNum(-61, 76);
+    })
+
+console.log(numbers);
+>>>>>>> 52a3d199abe34b5e35874ef373f7efb55d589cd3
