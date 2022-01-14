@@ -12,3 +12,4 @@ const numbers = nums.map((item, n, m) =>  {
     })
 
 console.log(numbers);
+console.log(1);
