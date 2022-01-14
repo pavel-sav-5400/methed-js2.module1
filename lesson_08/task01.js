@@ -1,16 +1,16 @@
-    'use strict'
+'use strict'
 
- const nums = [
+const nums = [
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 ];
 
 
 
 const numbers = nums.map(item =>  {
-    const getRundomNum = (min, max) => {
-        return Math.floor(Math.random() * (max - min) + min);
+    const getRundomNum = () => {
+    return Math.round(Math.random() * 100 + 1);
     };
-        return getRundomNum(1, 101);
+    return getRundomNum();
     })
  
-console.log(numbers);
+ console.log(numbers);

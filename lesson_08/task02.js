@@ -1,16 +1,17 @@
 'use strict'
 
 const nums = [
-   13, 7, 55, 9, 67, 89, 5, 2, 49, 68, 23, 4, 
-   98, 97, 91, 6, 1, 54, 76, 31, 8, 64, 25
+   1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 ];
 
-let numbers = nums.map((item, n, m) => {
-       const getRundomNum = (min, max) => {
-       return Math.floor(Math.random() * (max - min) + min);
-   };
-       return getRundomNum(1, 101);
-      
-})
+
+
+const numbers = nums.map((item, n, m) =>  {
+    const getRundomNum = (n, m) => {
+    return Math.round(Math.random() * (m - n) + n);
+    };
+    return getRundomNum(-61, 76);
+
+    })
 
 console.log(numbers);
