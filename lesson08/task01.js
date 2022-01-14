@@ -12,4 +12,3 @@ const numbers = nums.map(item =>  {
     })
  
  console.log(numbers);
- console.log(2);
