@@ -1,10 +1,8 @@
 'use strict';
 
 function gameBot() {
-  const rundomNum = 12; //Math.round(Math.random() * 100);
+  const rundomNum = Math.round(Math.random() * 100);
   let userNum = +prompt('Введите число от 1 до 100');
-console.log(rundomNum);
-   //function checkNum() {
  
   if(userNum > rundomNum) {
       alert('Загаданное число меньше');
@@ -26,9 +24,6 @@ console.log(rundomNum);
   }
   if (userNum === null) {
       alert('Игра окончена');
-    
   } 
-
- // } checkNum(); 
-}
+};
 gameBot();
