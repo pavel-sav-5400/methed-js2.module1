@@ -1,12 +1,11 @@
 'use strict'
 
-const nums = [
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-];
-
-const numbers = nums.map(item =>  {
-    let x = Math.round(Math.random() * 100 + 1);
+const numbers = (item) =>  {
+    let x = [];
+    for(let i = 0; i < item; i++) {
+    x.push(Math.round(Math.random() * 100));   
+    }
     return x;
-   })
+};
  
- console.log(numbers);
+console.log(numbers(12));
