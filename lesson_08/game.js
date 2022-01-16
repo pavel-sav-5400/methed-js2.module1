@@ -1,6 +1,6 @@
 'use strict';
 
-function gameBot() {
+const gameBot = () => {
   const rundomNum = Math.round(Math.random() * 100);
   let userNum = +prompt('Введите число от 1 до 100');
  
@@ -13,7 +13,7 @@ function gameBot() {
       return gameBot();
   }  
   
-  if(Number.isNaN(parseInt(userNum))) {
+  if(Number.isNaN(userNum)) {
       alert('Введи число!');
       return gameBot();
 
