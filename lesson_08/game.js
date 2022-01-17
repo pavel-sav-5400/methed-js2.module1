@@ -7,7 +7,7 @@ const getRandomNum = function(n, m) {
 };
 
 function game() {
-    const randomNum = getRandomNum(1, 100);
+    const randomNum = 33; //getRandomNum(1, 100);
 
     return (function checkNum(){
         const userNum = prompt('Введите число от 1 до 100');
@@ -31,8 +31,8 @@ function game() {
     return checkNum();
     }
     
-    if (userNum === randomNum) {
-    alert('Поздравляю, вы угадали');
+    if (userNum == randomNum) {
+    return alert('Поздравляю, вы угадали');
     }
             
     }());
