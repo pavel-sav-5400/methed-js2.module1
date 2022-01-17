@@ -1,29 +1,40 @@
 'use strict';
 
-const gameBot = () => {
-  const rundomNum = Math.round(Math.random() * 100);
-  let userNum = +prompt('Введите число от 1 до 100');
- 
-  if(userNum > rundomNum) {
-      alert('Загаданное число меньше');
-      return gameBot();
-  }
-  if(userNum < rundomNum) {
-      alert('Загаданное число больше');
-      return gameBot();
-  }  
-  
-  if(Number.isNaN(userNum)) {
-      alert('Введи число!');
-      return gameBot();
-
-  }
-  if(userNum === rundomNum) {
-      alert('Вы угадали!');
-       
-  }
-  if (userNum === null) {
-      alert('Игра окончена');
-  } 
+const getRandomNum = function(n, m) {
+    const min = Math.ceil(Math.min(n, m));
+    const max = Math.floor(Math.max(n, m));
+    return Math.floor((Math.random() * (max - min)) + min);
 };
-gameBot();
+
+function game() {
+    const randomNum = getRandomNum(1, 100);
+
+    return (function checkNum(){
+        const userNum = prompt('Введите число от 1 до 100');
+
+    if (userNum === null) {
+    return alert('Игра окончена');
+    }
+
+    if(isNaN(userNum)) {
+    alert('Введи число!');
+    return checkNum();
+    }
+
+    if (userNum > randomNum) {
+    alert('Загаданное число меньше');
+    return checkNum();
+    }
+
+    if (userNum < randomNum) {
+    alert('Загаданное число больше');
+    return checkNum();
+    }
+    
+    if (userNum === randomNum) {
+    alert('Поздравляю, вы угадали');
+    }
+            
+    }());
+    }
+    game();
