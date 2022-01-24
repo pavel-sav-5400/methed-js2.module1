@@ -33,7 +33,7 @@ const cart = {
         console.log('Общая стоимость: ' + JSON.stringify(this.totalPrice));
     },
 };
-cart.totalPrice = 344;
+
 cart.add('Чайник', 3600, 3);
 cart.add('Планшет', 2400, 5);
 cart.add('Микроволновка', 6300, 2);
@@ -41,8 +41,3 @@ cart.add('Телефон', 2700, 4);
 cart.add('Холодильник', 15000, 1);
 //cart.clear();
 cart.print();
-
-
-console.log('items: ', cart.items);
-console.log('count: ', cart.count);
-console.log('totalPrice: ', cart.totalPrice);
