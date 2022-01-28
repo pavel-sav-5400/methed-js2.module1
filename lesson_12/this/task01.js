@@ -9,12 +9,13 @@ const rectangle = {
   set perimeter(value) {
     this.width = value;
   },
-  set area(value) {
-    this.height = value;
-  },
   get area() {
     return `Площадь прямоугольника ${this.width * this.height} см`;
   },
+  set area(value) {
+    this.height = value;
+  },
+  
 };
 console.log(rectangle.perimeter);
 console.log(rectangle.area);
