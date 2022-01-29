@@ -1,21 +1,26 @@
 'use strict';
 
 const rectangle = {
-  width: 7,
+  width: 5,
   height: 5,
-  get perimeter() {
-    return `Периметр примоугольника ${(this.width + this.height) * 2} см`;
+  get per() {
+    return `Периметр прямоугольника ${(this.width + this.height) * 2} см`;
   },
-  set perimeter(value) {
-    this.width = value;
+  set per(value) {
+    if (typeof value === 'number') {
+      this.width = value;
+    }
   },
   get area() {
     return `Площадь прямоугольника ${this.width * this.height} см`;
   },
   set area(value) {
-    this.height = value;
+    if (typeof value === 'number') {
+      this.height = value;
+    }
   },
-  
+
 };
-console.log(rectangle.perimeter);
+
+console.log(rectangle.per);
 console.log(rectangle.area);
