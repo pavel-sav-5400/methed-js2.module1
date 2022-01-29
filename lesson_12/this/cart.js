@@ -34,10 +34,10 @@ const cart = {
     item.price * item.count).reduce((a, b) => a + b)) * this.discount / 100);
   },
   clear() {
-    for (const prop in cart) {
+    for (const prop in this) {
       // eslint-disable-next-line no-prototype-builtins
-      if (cart.hasOwnProperty(prop)) {
-        cart[prop] = 0;
+      if (this.hasOwnProperty(prop)) {
+        this[prop] = 0;
       }
     }
   },
@@ -54,4 +54,3 @@ cart.add('Телефон', 2700, 4);
 cart.add('Холодильник', 15000, 1);
 // cart.clear();
 cart.print();
-
