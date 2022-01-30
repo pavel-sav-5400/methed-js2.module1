@@ -9,9 +9,9 @@ const getRandomNum = function(n, m) {
 
 
 function game() {
-  const randomNum = 12; // getRandomNum(1, 100);
+  const randomNum = getRandomNum(1, 100);
 
-  (function checkNum() {
+   (function checkNum() {
     const userNum = prompt('Введите число от 1 до 100');
 
     if (userNum === null) {
