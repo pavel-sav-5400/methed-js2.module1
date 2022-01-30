@@ -39,24 +39,43 @@
         
         if (user === comp) {
             alert('Ничья');
-            start();
+            const ques = confirm('Ещё?');
+            if (ques === true) {
+                start();
+            }
+            else {
+                alert('Ваши очки: ' + result.player + "\n" + 'Очки компьютера: ' + result.computer); 
+            }
         };
         if (user === 'камень' && comp === 'бумага' || user === 'бумага' 
         && comp === 'ножницы' || user === 'ножницы' && comp === 'камень') {
-            alert('Вы проиграли');
+            alert('Ваш выбор: ' + user + "\n" + 'Выбор компьютера: ' + comp + "\n" + 'Вы проиграли');
             result.incComputer(1);
-            start();
+            const ques = confirm('Ещё?');
+            if (ques === true) {
+                start();
+            }
+            else {
+                alert('Ваши очки: ' + result.player + "\n" + 'Очки компьютера: ' + result.computer); 
+            }
         };
         if (user === 'камень' && comp === 'ножницы' || user === 'бумага' 
         && comp === 'камень' || user === 'ножницы' && comp === 'бумага') {
-            alert('Вы выиграли');
+            alert('Ваш выбор: ' + user + "\n" + 'Выбор компьютера: ' + comp + "\n" + 'Вы выиграли');
             result.incPlayer(1);
-            start();
+            const ques = confirm('Ещё?');
+            if (ques === true) {
+                start();
+            }
+            else {
+                alert('Ваши очки: ' + result.player + "\n" + 'Очки компьютера: ' + result.computer); 
+            }
+            
         }
         if (user === null) {
             const ques = confirm('Вы точно хотите выйти?');
             if (ques === true) {
-                alert('Не очень то и хотелось =(' + "\n" + 'Ваши очки: ' + result.player + "\n" + 'Очки компьютера: ' + result.computer);
+                alert('Ваши очки: ' + result.player + "\n" + 'Очки компьютера: ' + result.computer);
             }
             else {
                 alert('Играем дальше =)');
