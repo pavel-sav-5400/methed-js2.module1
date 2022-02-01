@@ -44,21 +44,21 @@
         start(); // 5 условие
       } else if (usNum > balls.player) {
         alert('Вы ввели число больше');
-        start();
+        start(); // 6 условие
       } else if (usNum === botNum) {
         balls.addComputer(usNum);
         balls.takePlayer(usNum);
         alert(`Бот + ${usNum} очков "\n"
       У Вас: ${balls.player} "\n"
       У Бота: ${balls.computer}`);
-        start();
+        start(); // 7 условие
       } else {
         balls.addPlayer(usNum);
         balls.takeComputer(usNum);
         alert(`Вы + ${usNum} очков "\n"
       У Вас: ${balls.player} "\n"
       У Бота: ${balls.computer}`);
-        start();
+        start(); // 8 условие
       }
     })();
   };
