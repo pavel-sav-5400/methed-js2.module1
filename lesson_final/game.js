@@ -31,17 +31,17 @@
 
 
       if (usNum === null) {
-        alert('Пока');
+        alert('Пока'); // 1 условие
       } else if (balls.player < 1 && balls.computer >= 10) {
-        alert('Бот выиграл');
+        alert('Бот выиграл'); // 2 условие
       } else if (balls.computer < 1 && balls.player >= 10) {
-        alert('Вы выиграли');
+        alert('Вы выиграли'); // 3 условие
       } else if (isNaN(usNum)) {
         alert('Вы ввели не число');
-        start();
+        start(); // 4 условие
       } else if (usNum < 1) {
         alert('Вы ввели отрицательное число');
-        start();
+        start(); // 5 условие
       } else if (usNum > balls.player) {
         alert('Вы ввели число больше');
         start();
