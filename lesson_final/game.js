@@ -25,45 +25,50 @@
             },
           };
     
-    console.log('player: ', balls.player);
-    console.log('computer: ', balls.computer);
-
     return (function start() {
     const usNum = +prompt( `введи число от 1 до ${balls.player}`);
     const botNum = getRandomIntInclusive(1, balls.computer);
     
 
-    if (usNum === null) {
+    if (usNum == null) {
         alert('Пока');
     }
-    else if(balls.player < 1 || balls.computer < 1) {
-      alert('game over');
-      
+    else if(balls.player < 1 && balls.computer >= 10) {
+        alert('Бот выиграл');
+    } 
+    else if (balls.computer < 1 && balls.player >= 10) {
+      alert('Вы выиграли');
     }
-    else if (isNaN(usNum) || usNum.length === 0) {
+    else if (isNaN(usNum) || usNum < 1) {
+
         start();
     }
     
-    
+    else if (usNum > balls.player) {
+          alert('Вы ввели число больше');
+          start();
+    }
    
     else if (usNum === botNum) {
       balls.addComputer(usNum);
       balls.takePlayer(usNum);
-      alert( `BOT + ${usNum} очков "\n"
-      player: ${balls.player} "\n"
-      bot: ${balls.computer}`);
+      alert( `Бот + ${usNum} очков "\n"
+      У Вас: ${balls.player} "\n"
+      У Бота: ${balls.computer}`);
+      
       start();
     } 
-    else if (usNum != botNum){
+    else  {
       balls.addPlayer(usNum);
       balls.takeComputer(usNum);
-      alert( `PLAYER + ${usNum} очков "\n"
-      player: ${balls.player} "\n"
-      bot: ${balls.computer}`);
+      alert( `Вы + ${usNum} очков "\n"
+      У Вас: ${balls.player} "\n"
+      У Бота: ${balls.computer}`);
       start();
     } 
    
     
-    })};
+    }());
+};
     window.marbles = game;
 })();
