@@ -36,11 +36,7 @@
         }
       }; compVal();
 
-      if (user === '') {
-        start();
-      }
-
-      if (user === comp) {
+       if (user === comp) {
         alert('Ничья');
         const ques = confirm('Ещё?');
         if (ques === true) {
@@ -50,8 +46,13 @@
           '\n', 'Очки компьютера: ' + result.computer);
         }
       }
-      if (user === 'камень' && comp === 'бумага' || user === 'бумага' &&
-        comp === 'ножницы' || user === 'ножницы' && comp === 'камень') {
+      else if (
+      (user === 'камень' || user === 'к' || user === 'кам') && comp === 'бумага'
+      || (user === 'бумага' || user === 'бум' || user === 'б') && 
+      comp === 'ножницы'
+      || (user === 'ножницы' || user === 'нож' || user === 'н') && 
+      comp === 'камень') 
+      {
         alert('Ваш выбор: ' + user +
         '\n' + 'Выбор компьютера: ' + comp + '\n' + 'Вы проиграли');
         result.incComputer(1);
@@ -62,9 +63,14 @@
           alert('Ваши очки: ' + result.player +
           '\n' + 'Очки компьютера: ' + result.computer);
         }
-      }
-      if (user === 'камень' && comp === 'ножницы' || user === 'бумага' &&
-        comp === 'камень' || user === 'ножницы' && comp === 'бумага') {
+      } 
+      
+      else if (
+      (user === 'камень' || user === 'к' || user === 'кам') && comp === 'ножницы'
+      || (user === 'бумага' || user === 'бум' || user === 'б') &&
+        comp === 'камень'
+      || (user === 'ножницы' || user === 'нож' || user === 'н') && 
+      comp === 'бумага') {
         alert('Ваш выбор: ' + user +
         '\n' + 'Выбор компьютера: ' + comp + '\n' + 'Вы выиграли');
         result.incPlayer(1);
@@ -75,8 +81,8 @@
           alert('Ваши очки: ' + result.player +
            '\n' + 'Очки компьютера: ' + result.computer);
         }
-      }
-      if (user === null) {
+      }  
+      else if (user === null) {
         const exit = confirm('Вы точно хотите выйти?');
         if (exit === true) {
           alert('Ваши очки: ' + result.player +
@@ -85,6 +91,9 @@
           alert('Играем дальше =)');
           start();
         }
+      }
+      else { 
+        start();
       }
     };
   };
