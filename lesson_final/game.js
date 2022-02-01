@@ -30,7 +30,7 @@
     const botNum = getRandomIntInclusive(1, balls.computer);
     
 
-    if (usNum == null) {
+    if (usNum === null) {
         alert('Пока');
     }
     else if(balls.player < 1 && balls.computer >= 10) {
@@ -39,8 +39,12 @@
     else if (balls.computer < 1 && balls.player >= 10) {
       alert('Вы выиграли');
     }
-    else if (isNaN(usNum) || usNum < 1) {
-
+    else if (isNaN(usNum)) {
+        alert('Вы ввели не число');
+        start();
+    } 
+    else if (usNum < 1) {
+        alert('Вы ввели отрицательное число')
         start();
     }
     
@@ -55,7 +59,6 @@
       alert( `Бот + ${usNum} очков "\n"
       У Вас: ${balls.player} "\n"
       У Бота: ${balls.computer}`);
-      
       start();
     } 
     else  {
@@ -68,7 +71,7 @@
     } 
    
     
-    }());
+    })();
 };
     window.marbles = game;
 })();
