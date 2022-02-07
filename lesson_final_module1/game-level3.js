@@ -62,7 +62,6 @@
           return stepBot();
         }
 
-
         if (
           (user === 'камень' || user === 'к' ||
            user === 'кам') && comp === 'ножницы' ||
@@ -135,15 +134,14 @@
       У Бота: ${balls.computer}`);
             stepBot();
           }
-        }stepPlayer();
-
+        }
         function stepBot() {
-          {if (balls.player < 0) {
+          if (balls.player < 1) {
             return alert('Бот выиграл');
           }
-          if (balls.computer < 0) {
+          if (balls.computer < 1) {
             return alert('Вы выиграли');
-          }}
+          }
           const usNum = prompt(`Число четное? "\n" введите "да" или "нет"`);
           const botNum = getRandomIntInclusive(1, balls.computer);
 
@@ -192,7 +190,7 @@
           } else {
             return stepBot();
           }
-        }stepBot();
+        }
       }();
     })();
   };

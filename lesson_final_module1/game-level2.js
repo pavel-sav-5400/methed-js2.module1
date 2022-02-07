@@ -38,7 +38,6 @@
         const usNum = prompt(`введи число от 1 до ${balls.player}`);
         const botNum = getRandomIntInclusive(1, 2);
 
-
         if (usNum === null) {
           return alert('Пока');
         }
@@ -89,10 +88,10 @@
       }stepPlayer();
 
       function stepBot() {
-        {if (balls.player < 0) {
+        {if (balls.player < 1) {
           return alert('Бот выиграл');
         }
-        if (balls.computer < 0) {
+        if (balls.computer < 1) {
           return alert('Вы выиграли');
         }}
         const usNum = prompt(`Число четное? "\n" введите "да" или "нет"`);
@@ -101,7 +100,6 @@
         if (usNum === null) {
           return alert('Пока');
         }
-
         if
         ((usNum === 'да') && (botNum % 2 == 0)) {
           balls.addPlayer(+botNum);
