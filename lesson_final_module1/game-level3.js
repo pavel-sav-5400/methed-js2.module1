@@ -105,32 +105,32 @@
           if ((usNum % 2 == 0) && (botNum % 2 == 0)) {
             balls.addComputer(+usNum);
             balls.takePlayer(+usNum);
-            alert(`Бот: число четное "\n"
-      У Вас: ${balls.player} "\n"
+            alert(`Бот: число четное \n
+      У Вас: ${balls.player} \n
       У Бота: ${balls.computer}`);
             stepBot();
           }
           if ((usNum % 2 !== 0) && (botNum % 2 !== 0)) {
             balls.addComputer(+usNum);
             balls.takePlayer(+usNum);
-            alert(`Бот: число нечетное "\n"
-      У Вас: ${balls.player} "\n"
+            alert(`Бот: число нечетное \n
+      У Вас: ${balls.player} \n
       У Бота: ${balls.computer}`);
             stepBot();
           }
           if ((usNum % 2 == 0) && (botNum % 2 !== 0)) {
             balls.addPlayer(+usNum);
             balls.takeComputer(+usNum);
-            alert(`Бот: число нечетное "\n"
-      У Вас: ${balls.player} "\n"
+            alert(`Бот: число нечетное \n
+      У Вас: ${balls.player} \n
       У Бота: ${balls.computer}`);
             stepBot();
           }
           if ((usNum % 2 !== 0) && (botNum % 2 == 0)) {
             balls.addPlayer(+usNum);
             balls.takeComputer(+usNum);
-            alert(`Бот: число четное "\n"
-      У Вас: ${balls.player} "\n"
+            alert(`Бот: число четное \n
+      У Вас: ${balls.player} \n
       У Бота: ${balls.computer}`);
             stepBot();
           }
@@ -142,7 +142,7 @@
           if (balls.computer < 1) {
             return alert('Вы выиграли');
           }
-          const usNum = prompt(`Число четное? "\n" введите "да" или "нет"`);
+          const usNum = prompt(`Число четное? \n введите "да" или "нет"`);
           const botNum = getRandomIntInclusive(1, balls.computer);
 
           if (usNum === null) {
@@ -153,18 +153,18 @@
           ((usNum === 'да') && (botNum % 2 == 0)) {
             balls.addPlayer(+botNum);
             balls.takeComputer(+botNum);
-            alert(`Число Бота: ${botNum} "\n"
-             Вы + ${botNum} очков "\n"
-           У Вас: ${balls.player} "\n"
+            alert(`Число Бота: ${botNum} \n
+             Вы + ${botNum} очков \n
+           У Вас: ${balls.player} \n
            У Бота: ${balls.computer}`);
             return stepPlayer();
           }
           if ((usNum === 'нет') && (botNum % 2 !== 0)) {
             balls.addPlayer(+botNum);
             balls.takeComputer(+botNum);
-            alert(`Число Бота: ${botNum} "\n"
-             Вы + ${botNum} очков "\n"
-           У Вас: ${balls.player} "\n"
+            alert(`Число Бота: ${botNum} \n
+             Вы + ${botNum} очков \n
+           У Вас: ${balls.player} \n
            У Бота: ${balls.computer}`);
             return stepPlayer();
           }
@@ -172,9 +172,9 @@
           ((usNum === 'да') && (botNum % 2 !== 0)) {
             balls.addComputer(+botNum);
             balls.takePlayer(+botNum);
-            alert(`Число Бота: ${botNum} "\n"
-             Бот: + ${botNum} очков "\n"
-           У Вас: ${balls.player} "\n"
+            alert(`Число Бота: ${botNum} \n
+             Бот: + ${botNum} очков \n
+           У Вас: ${balls.player} \n
            У Бота: ${balls.computer}`);
             return stepPlayer();
           }
@@ -182,9 +182,9 @@
           ((usNum === 'нет') && (botNum % 2 == 0)) {
             balls.addComputer(+botNum);
             balls.takePlayer(+botNum);
-            alert(`Число Бота: ${botNum} "\n"
-             Бот: + ${botNum} очков "\n"
-           У Вас: ${balls.player} "\n"
+            alert(`Число Бота: ${botNum} \n
+             Бот: + ${botNum} очков \n
+           У Вас: ${balls.player} \n
            У Бота: ${balls.computer}`);
             return stepPlayer();
           } else {
