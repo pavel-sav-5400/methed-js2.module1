@@ -56,7 +56,7 @@
         return stepPlayer();
       }
       if (user === null) {
-        return alert('Пока');
+        alert('Пока');
       } else {
         return start();
       }
@@ -133,17 +133,15 @@
         (usNum === false) && (botNum % 2 !== 0)) {
           balls.addPlayer(botNum);
           balls.takeComputer(botNum);
-          alert(`Число Бота: ${botNum} "\n"
-          Вы + ${botNum} очков "\n"
-          У Вас: ${balls.player} "\n"
+          alert(`Число Бота: ${botNum} \n
+          У Вас: ${balls.player} \n
           У Бота: ${balls.computer}`);
           return stepPlayer();
         } else {
           balls.addComputer(botNum);
           balls.takePlayer(botNum);
-          alert(`Число Бота: ${botNum} "\n"
-          Бот: + ${botNum} очков "\n"
-          У Вас: ${balls.player} "\n"
+          alert(`Число Бота: ${botNum} \n
+          У Вас: ${balls.player} \n
           У Бота: ${balls.computer}`);
           return stepPlayer();
         }
