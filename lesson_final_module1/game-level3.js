@@ -30,7 +30,8 @@
     };
 
     return (function start() {
-      const user = prompt('Выберите: камень, ножницы или бумага?');
+      // eslint-disable-next-line max-len
+      const user = prompt(`Выберите: камень, ножницы или бумага?`).toLowerCase().trim();
       const comp = getRandomIntInclusive(0, 2);
 
       if (
